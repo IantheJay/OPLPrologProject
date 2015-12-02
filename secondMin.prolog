@@ -1,11 +1,11 @@
-secondMin(List, Min) :-
+secondMin(List, Min2) :-
     length(List, Len),
     Len < 2 ->  
     write("ERROR: List has fewer than 2 members."), nl, fail ;
     
     ( listCheck(List),
       sort(0, @=<, List,  Sorted),
-      [_,Min | _] = Sorted
+      [_,Min2 | _] = Sorted
     ).
     
     
